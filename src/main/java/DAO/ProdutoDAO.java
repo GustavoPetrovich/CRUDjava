@@ -78,14 +78,32 @@ public class ProdutoDAO {
             
             
             stmt.execute();
-            JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+            JOptionPane.showMessageDialog(null, "Produto alterado com sucesso!");
             
             
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Falha ao cadastrar: " + e);
+            JOptionPane.showMessageDialog(null, "Falha ao alterar: " + e);
         } finally{
             Conexao.closeConnection(con, stmt);
         }
     }
-    
+    public void delete(Produto p){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stmt = null;
+        
+        try {
+            stmt = con.prepareStatement("DELETE FROM tbl_produto WHERE id =?");
+            stmt.setInt(1, p.getId());
+            
+            
+            stmt.execute();
+            JOptionPane.showMessageDialog(null, "Produto removido com sucesso!");
+            
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Falha ao remover: " + e);
+        } finally{
+            Conexao.closeConnection(con, stmt);
+        }
+    }
 }
