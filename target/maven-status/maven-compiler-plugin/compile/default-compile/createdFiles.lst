@@ -1,3 +1,4 @@
+Janelas\janelaUsuario.class
 Janelas\CadastroProduto$5.class
 BD\Conexao.class
 DAO\ProdutoDAO.class
@@ -7,4 +8,5 @@ Janelas\CadastroProduto$3.class
 Janelas\CadastroProduto.class
 Model\ProdutoTableModel.class
 Janelas\CadastroProduto$1.class
+Janelas\janelaUsuario$1.class
 Objetos\Produto.class
